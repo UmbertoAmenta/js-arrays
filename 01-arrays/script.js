@@ -14,7 +14,8 @@ const fourthTeacher = teachers[3];
 console.log(teachers[3])
 
 // 2. Sostituisci il quinto insegnante nell'array teachers con 'Patrick'
-teachers.splice(4,1,"Patrick")
+// teachers.splice(4,1,"Patrick") /*alternativa, meno pratica*/
+teachers[4] = "Patrick"
 console.log(teachers[4])
 
 // 3. Rimuovi l'ultimo insegnante dall'array e salvalo nella variabile lastTeacher qui sotto
@@ -45,10 +46,11 @@ console.log(lewisIndex)
 
 // 9. Unisci tutti gli insegnanti nell'array teachers in una stringa
 // separata da virgole e salvala nella variabile teachersString
-const teachersString = teachers.toString();
+// const teachersString = teachers.toString(); /*alternativa, non stacca gli elementi tra loro*/
+const teachersString = teachers.join(", ")
 console.log(teachersString)
 
 // 10. Verifica se l'array teachers è vuoto
 // e salva il risultato nella variabile isTeachersEmpty
-const isTeachersEmpty = teachers.length;
+const isTeachersEmpty = teachers.length === 0;
 console.log(isTeachersEmpty)
